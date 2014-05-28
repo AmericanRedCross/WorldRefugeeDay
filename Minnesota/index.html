@@ -45,22 +45,22 @@
   google.load("visualization", "1", {packages:["corechart"]});
   google.setOnLoadCallback(drawChart);
   function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Country', 'Population'],
-      ['Bhutan',  2628],
-      ['Burma',      2826],
-      ['Burundi', 352],
-      ['Cuba',      472],
-      ['Democratic Republic of the Congo',    574],
-      ['Eritrea',     553],
-      ['Iran',  404],
-      ['Iraq',     4663],
-      ['Somalia', 1261],
-      ['Thailand',    255]
-    ]);
+      var data = google.visualization.arrayToDataTable([
+        ['Country', 'Population'],
+        ['Bhutan',  698],
+        ['Burma',     3285],
+        ['Eritrea',    98],
+        ['Ethiopia',    384],
+        ['Former USSR',     292],
+        ['Iraq', 497],
+        ['Laos', 105],
+        ['Liberia',  171],
+        ['Somalia',      2018],
+        ['Thailand',      233]
+      ]);
 
     var options = {
-      title: 'Refugee Population in Arizona',
+      // title: 'Refugee Population in Minnesota',
       titleTextStyle: {color:'white', fontName:'Cisalpin'},
       legendTextStyle: {color:'white', fontName:'Cisalpin'},
       pieHole: 0.4,
@@ -87,7 +87,7 @@
                 <div class='box'>
                   <p class='boxtitle'>Minnesota Refugee Population 2008 - 2012</p>
                   <p class='explain'>The chart below breaks down the refugees settling in Minnesota between 2008 and 2012 by nationality.</br></br><i>Mouse over the chart to explore the exact numbers of refugees</i></p>
-                  <p class='number'>XYZ</p><p class='name'>total refugees</p>
+                  <p class='number'>7,781</p><p class='name'>total refugees</p>
                   <div id='donutchart'></div>
                 </div>
               </div>
