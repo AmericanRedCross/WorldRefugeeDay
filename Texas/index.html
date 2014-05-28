@@ -47,20 +47,19 @@
   function drawChart() {
     var data = google.visualization.arrayToDataTable([
       ['Country', 'Population'],
-      ['Bhutan',  2628],
-      ['Burma',      2826],
-      ['Burundi', 352],
-      ['Cuba',      472],
-      ['Democratic Republic of the Congo',    574],
-      ['Eritrea',     553],
-      ['Iran',  404],
-      ['Iraq',     4663],
-      ['Somalia', 1261],
-      ['Thailand',    255]
+      ['Bhutan',      5813],
+      ['Burma',     11351],
+      ['Burundi', 832],
+      ['Cuba',     1161],
+      ['Democratic Republic of the Congo',    1332],
+      ['Eritrea',  878],
+      ['Iran',      1080],
+      ['Iraq',  5759],
+      ['Somalia', 1801],
+      ['Thailand',    578]
     ]);
 
     var options = {
-      title: 'Refugee Population in Arizona',
       titleTextStyle: {color:'white', fontName:'Cisalpin'},
       legendTextStyle: {color:'white', fontName:'Cisalpin'},
       pieHole: 0.4,
@@ -87,7 +86,7 @@
                 <div class='box'>
                   <p class='boxtitle'>Texas Refugee Population 2008 - 2012</p>
                   <p class='explain'>The chart below breaks down the refugees settling in Texas between 2008 and 2012 by nationality.</br></br><i>Mouse over the chart to explore the exact numbers of refugees</i></p>
-                  <p class='number'>XYZ</p><p class='name'>total refugees</p>
+                  <p class='number'>30,585</p><p class='name'>total refugees</p>
                   <div id='donutchart'></div>
                 </div>
               </div>
@@ -95,7 +94,7 @@
               <script type="text/javascript">
               // Create a map in the div #map
               var map = L.mapbox.map('map', 'americanredcross.ic0gkhgd')
-                  .setView([31.766,-93.417],6);
+                  .setView([31.66,-92.317],6);
               </script>
     </body>
 </html>
