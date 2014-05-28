@@ -11,11 +11,11 @@
 
 .box {
     position:absolute;
-    right:3%;
+    right:7%;
     top:10%;
     background-color:#383838;
-    width:43%;
-    height:62%;
+    width:600px;
+    height:500px;
     padding:15px;
     font-family:'Cisalpin';
     opacity:0.85;
@@ -46,7 +46,7 @@
 .number {
     position:absolute;
     bottom:0px;
-    right:18%;
+    right:120px;
     z-index:2;
     color:#FFFFFF;
     font-size: 150%;
@@ -56,7 +56,7 @@
 .name {
     position:absolute;
     bottom:10px;
-    right:2%;
+    right:20px;
     z-index:2;
     color:#FFFFFF;
     font-size: 100%;
