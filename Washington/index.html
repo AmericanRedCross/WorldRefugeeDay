@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>World Refugee Day in Washington State</title>
+
+  <meta property="og:image" content="" />
+  <meta property="og:title" content="American Red Cross" />
+  <meta property="og:description" content = "" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="American Red Cross">
+
+  <link rel="shortcut icon" href="img/favicon.png">
+
+
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <!--[if lte IE 8]>
+      <link href='//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.ie.css' rel='stylesheet'>
+      <![endif]-->
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
+<!--   <link href="css/redcross.css" rel="stylesheet"> -->
+  <link href="css/main.css" rel="stylesheet">
+    <!-- Add JQuery and use its getJSON method which is used to get external GeoJson files -->
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="js/leaflet.groupedlayercontrol.js"></script>
+  <script src="js/maps.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
+  <script src="js/main.js"></script>
+  <!-- add Google Analytics -->
+        <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-42245094-4', 'redcross.org');
+        ga('send', 'pageview');
+  </script>
+
+  <script type="text/javascript">
+  google.load("visualization", "1", {packages:["corechart"]});
+  google.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Country', 'Population'],
+      ['Bhutan',  2628],
+      ['Burma',      2826],
+      ['Burundi', 352],
+      ['Cuba',      472],
+      ['Democratic Republic of the Congo',    574],
+      ['Eritrea',     553],
+      ['Iran',  404],
+      ['Iraq',     4663],
+      ['Somalia', 1261],
+      ['Thailand',    255]
+    ]);
+
+    var options = {
+      title: 'Refugee Population in Arizona',
+      titleTextStyle: {color:'white', fontName:'Cisalpin'},
+      legendTextStyle: {color:'white', fontName:'Cisalpin'},
+      pieHole: 0.4,
+      backgroundColor:'none',
+      };
+
+    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+    chart.draw(data, options);
+  }
+  </script>
+  <style>
+    @font-face {
+    font-family: 'Cisalpin';
+    src: url('fonts/CisalpinLTStd-Regular.otf');
+    }
+  </style>
+</head>
+
+    <body>
+            <!--[if lt IE 10]>
+            <p class="oldBrowser" style="text-align:center;">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a>.</p>
+            <![endif]-->
+              <div id='chartbox'>
+                <div class='box'>
+                  <p class='boxtitle'>Washington Refugee Population 2008 - 2012</p>
+                  <p class='explain'>The chart below breaks down the refugees settling in Washington State between 2008 and 2012 by nationality.</br></br><i>Mouse over the chart to explore the exact numbers of refugees</i></p>
+                  <p class='number'>XYZ</p><p class='name'>total refugees</p>
+                  <div id='donutchart'></div>
+                </div>
+              </div>
+              <div id='map'></div>
+              <script type="text/javascript">
+              // Create a map in the div #map
+              var map = L.mapbox.map('map', 'americanredcross.ic0gkhgd')
+                  .setView([47.458,-117.92],7);
+              </script>
+    </body>
+</html>
