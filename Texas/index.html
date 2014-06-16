@@ -15,21 +15,18 @@
   <link rel="shortcut icon" href="img/favicon.png">
 
 
-  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <!--[if lte IE 8]>
-      <link href='//api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.ie.css' rel='stylesheet'>
+      <link href='//api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.ie.css' rel='stylesheet'>
       <![endif]-->
-  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.css' rel='stylesheet' />
-<!--   <link href="css/redcross.css" rel="stylesheet"> -->
-  <link href="css/main.css" rel="stylesheet">
+  <link href='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.css' rel='stylesheet' />
+  <link href="../css/main.css" rel="stylesheet">
     <!-- Add JQuery and use its getJSON method which is used to get external GeoJson files -->
-  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   <script src="https://www.google.com/jsapi"></script>
-  <script src="js/leaflet.groupedlayercontrol.js"></script>
-  <script src="js/maps.js"></script>
-  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.3/mapbox.js'></script>
-  <script src="js/main.js"></script>
+  <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
+
   <!-- add Google Analytics -->
         <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -41,40 +38,10 @@
         ga('send', 'pageview');
   </script>
 
-  <script type="text/javascript">
-  google.load("visualization", "1", {packages:["corechart"]});
-  google.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var data = google.visualization.arrayToDataTable([
-      ['Country', 'Population'],
-      ['Bhutan',      5813],
-      ['Burma',     11351],
-      ['Burundi', 832],
-      ['Cuba',     1161],
-      ['Democratic Republic of the Congo',    1332],
-      ['Eritrea',  878],
-      ['Iran',      1080],
-      ['Iraq',  5759],
-      ['Somalia', 1801],
-      ['Thailand',    578]
-    ]);
-
-    var options = {
-      tooltip: {textStyle: {fontSize: 18}},
-      titleTextStyle: {color:'white', fontName:'Cisalpin'},
-      legendTextStyle: {color:'white', fontName:'Cisalpin', fontSize: 14},
-      pieHole: 0.4,
-      backgroundColor:'none',
-      };
-
-    var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
-    chart.draw(data, options);
-  }
-  </script>
   <style>
     @font-face {
-    font-family: 'Cisalpin';
-    src: url('fonts/CisalpinLTStd-Regular.otf');
+      font-family: 'Cisalpin';
+      src: url('../fonts/CisalpinLTStd-Regular.otf');
     }
   </style>
 </head>
@@ -92,10 +59,7 @@
                 </div>
               </div>
               <div id='map'></div>
-              <script type="text/javascript">
-              // Create a map in the div #map
-              var map = L.mapbox.map('map', 'americanredcross.ic3dd063')
-                  .setView([31.66,-91.317],6);
-              </script>
+
+              <script src="texas.js"></script>
     </body>
 </html>
